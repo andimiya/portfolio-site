@@ -62,6 +62,7 @@ class WorkShowcaseContainer extends React.Component {
       <div className="work-showcase-container outer">
         <WorkShowcase
           title={this.state.selectedContent.title}
+          position={this.state.selectedContent.position}
           description={this.state.selectedContent.description}
           workSample={this.state.selectedWorkSample}
           />
