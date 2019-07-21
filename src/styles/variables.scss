@@ -1,0 +1,26 @@
+$background-color-dark: #75d6c7;
+$text-color-dark: black;
+$text-color-h2: #68c9ba;
+$text-link: #5db2a6;
+
+$small-width: 425px;
+$medium-width: 750px;
+$large-width: 1024px;
+
+@mixin small {
+  @media (min-width: #{$small-width}) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: #{$medium-width}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: #{$medium-width}) {
+    @content;
+  }
+}

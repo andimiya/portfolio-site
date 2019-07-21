@@ -27,7 +27,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy-prod": "npm run build && aws s3 sync build/ s3://andreatakamiya.com --delete --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers"
+    "deploy-prod": "npm run build && aws s3 sync build/ s3://andreatakamiya.com --delete --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers",
+    "deploy-test": "npm run build && aws s3 sync build/ s3://andrea-test-site --delete --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers"
   },
   "browserslist": {
     "production": [
