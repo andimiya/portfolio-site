@@ -16,13 +16,9 @@ class App extends React.Component {
   }
 
   handleLoad(e) {
-    console.log("Install Prompt fired");
-
     // For older browsers
     e.preventDefault();
-
     deferredPrompt = e;
-    console.log(deferredPrompt, "deferred prompt");
     // See if the app is already installed, in that case, do nothing
   }
 
