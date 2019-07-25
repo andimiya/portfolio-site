@@ -12,7 +12,9 @@ let deferredPrompt;
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      disabled: true
+    };
   }
 
   handleLoad(e) {
@@ -24,11 +26,15 @@ class App extends React.Component {
 
   componentDidMount() {
     window.addEventListener("beforeinstallprompt", this.handleLoad);
+    this.timeoutId = window.setTimeout(
+      () => this.setState({ disabled: false }),
+      2000
+    );
   }
 
-  componentWillUnmount() {
-    window.removeEventListener("beforeinstallprompt", this.handleLoad);
-  }
+  // componentWillUnmount() {
+  //   window.removeEventListener("beforeinstallprompt", this.handleLoad);
+  // }
 
   onClick = e => {
     deferredPrompt.prompt();
@@ -44,8 +50,25 @@ class App extends React.Component {
   };
 
   render() {
+    const { disabled } = this.state;
+    let buttonStyle = "disabled";
+
+    if (!disabled) {
+      buttonStyle = "";
+    }
+
     return (
       <div id="app-container">
+        <section id="installBanner" className="banner">
+          <p>Install this app and get to it quickly, also enjoy it offline</p>
+          <button
+            id="installBtn"
+            className={buttonStyle}
+            onClick={e => this.onClick(e)}
+          >
+            Install App
+          </button>
+        </section>
         <Router>
           <div className="app">
             <NavBar />
@@ -53,11 +76,6 @@ class App extends React.Component {
             <Route exact path="/work" component={WorkContainer} />
             <Route exact path="/work/:work" component={WorkShowcaseContainer} />
             <Route exact path="/resume" component={ResumeContainer} />
-            <section id="installBanner" className="banner">
-              <button id="installBtn" onClick={e => this.onClick(e)}>
-                Install App
-              </button>
-            </section>
             <Footer />
           </div>
         </Router>
