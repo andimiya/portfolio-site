@@ -6,6 +6,7 @@ import WorkContainer from "./containers/WorkContainer";
 import WorkShowcaseContainer from "./containers/WorkShowcaseContainer";
 import ResumeContainer from "./containers/ResumeContainer";
 import Footer from "./components/Footer";
+import SwipeTest from "./components/SwipeTest";
 
 let deferredPrompt;
 
@@ -13,11 +14,23 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      disabled: true
+      disabled: true,
+      displayPrompt: false
     };
   }
 
+  isPromptSupported = e => {
+    const userAgent = navigator.userAgent.toLowerCase();
+    if (userAgent.indexOf("chrome") > -1) {
+      return this.setState({ displayPrompt: true });
+    } else if (userAgent.indexOf("firefox") > -1) {
+      return this.setState({ displayPrompt: true });
+    }
+    return;
+  };
+
   handleLoad(e) {
+    console.log("handle load");
     // For older browsers
     e.preventDefault();
     deferredPrompt = e;
@@ -25,16 +38,17 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    this.isPromptSupported();
     window.addEventListener("beforeinstallprompt", this.handleLoad);
-    this.timeoutId = window.setTimeout(
-      () => this.setState({ disabled: false }),
-      2000
-    );
+    document.addEventListener("DOMContentLoaded", event => {
+      console.log("content loaded");
+      this.setState({ disabled: false });
+    });
   }
 
-  // componentWillUnmount() {
-  //   window.removeEventListener("beforeinstallprompt", this.handleLoad);
-  // }
+  componentWillUnmount() {
+    window.removeEventListener("beforeinstallprompt", this.handleLoad);
+  }
 
   onClick = e => {
     deferredPrompt.prompt();
@@ -50,7 +64,7 @@ class App extends React.Component {
   };
 
   render() {
-    const { disabled } = this.state;
+    const { disabled, displayPrompt } = this.state;
     let buttonStyle = "disabled";
 
     if (!disabled) {
@@ -59,20 +73,22 @@ class App extends React.Component {
 
     return (
       <div id="app-container">
-        <section id="installBanner" className="banner">
-          <p>Install this app and get to it quickly, also enjoy it offline</p>
-          <button
-            id="installBtn"
-            className={buttonStyle}
-            onClick={e => this.onClick(e)}
-          >
-            Install App
-          </button>
-        </section>
+        {displayPrompt && (
+          <section id="installBanner" className="banner">
+            <p>Install this app and get to it quickly, also enjoy it offline</p>
+            <button
+              id="installBtn"
+              className={buttonStyle}
+              onClick={e => this.onClick(e)}
+            >
+              Install App
+            </button>
+          </section>
+        )}
         <Router>
           <div className="app">
             <NavBar />
-            <Route exact path="/" component={WorkContainer} />
+            <Route exact path="/" component={SwipeTest} />
             <Route exact path="/work" component={WorkContainer} />
             <Route exact path="/work/:work" component={WorkShowcaseContainer} />
             <Route exact path="/resume" component={ResumeContainer} />

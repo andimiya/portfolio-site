@@ -42,6 +42,21 @@ $text-link: #5db2a6;
   letter-spacing: 0.3px;
 }
 
+.pane {
+  padding: 2rem;
+  background-color: gray;
+}
+
+.pane2 {
+  padding: 2rem;
+  background-color: lightblue;
+}
+
+.pane3 {
+  padding: 2rem;
+  background-color: violet;
+}
+
 .banner {
   display: flex;
   justify-content: space-between;
