@@ -47,7 +47,7 @@ class App extends React.Component {
     return (
       <div>
         <div className="notification">
-          Install this app and get to it quickly, also enjoy it offline
+          <p>Install this app and get to it quickly, also enjoy it offline</p>
           <button
             id="installBtn"
             onClick={e => this.onClick(e)}
