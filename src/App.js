@@ -46,7 +46,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div className="notification">
+        {/* <div className="notification">
           <p>Install this app and get to it quickly, also enjoy it offline</p>
           <button
             id="installBtn"
@@ -55,7 +55,7 @@ class App extends React.Component {
           >
             Install App
           </button>
-        </div>
+        </div> */}
         <Router>
           <div className="app">
             <NavBar />

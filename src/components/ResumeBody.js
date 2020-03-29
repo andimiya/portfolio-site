@@ -75,15 +75,20 @@ const ResumeBody = props => {
             >
               DEVLEAGUE
             </a>
-            <br />Honolulu, Hawaii<br />Nov 2016 - May 2017{" "}
+            <br />
+            Honolulu, Hawaii
+            <br />
+            Nov 2016 - May 2017{" "}
           </p>
           <h4 className="bachelor-of-arts-in-business-administration">
             Bachelor of Arts in Business Administration
           </h4>
           <p>
-            Concentration in Marketing and International Business<br />University
-            of Oregon: 2005 – 2007<br />University of Hawaii at Manoa: 2008 –
-            2009{" "}
+            Concentration in Marketing and International Business
+            <br />
+            University of Oregon: 2005 – 2007
+            <br />
+            University of Hawaii at Manoa: 2008 – 2009{" "}
           </p>
           <hr />
           <div className="header-with-icon">
@@ -195,7 +200,8 @@ const ResumeBody = props => {
                 rel="noopener noreferrer"
               >
                 HawaiianAirlines.com
-              </a>.
+              </a>
+              .
             </li>
             <li>
               Worked through many risks and challenges that arose during the
@@ -333,12 +339,15 @@ const ResumeBody = props => {
           <p>
             <a href="https://github.com/andimiya/buoy-call">Github</a> |{" "}
             <a href="https://buoycall.org">BuoyCall.org</a>
-            <br />April 2017<br />Collaborated with 3 other students to create
-            an application which found and displayed historical buoy data as
-            well plotted both buoys and sharks on a map. Users were able to
-            interact with the application by clicking on any buoy to view
-            graphed data, and could also select a shark on the map and name it
-            by making a five dollar donation.
+            <br />
+            April 2017
+            <br />
+            Collaborated with 3 other students to create an application which
+            found and displayed historical buoy data as well plotted both buoys
+            and sharks on a map. Users were able to interact with the
+            application by clicking on any buoy to view graphed data, and could
+            also select a shark on the map and name it by making a five dollar
+            donation.
           </p>
           <h4 className="contributions-to-this-project-include-">
             Contributions to this project include:

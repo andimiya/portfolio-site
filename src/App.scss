@@ -58,13 +58,14 @@ body {
 
   .field.is-grouped {
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: no-wrap;
 
     .control {
       flex: 100%;
       text-align: center;
       margin: 0;
       padding: 5px;
+      padding-left: 30px;
 
       a {
         color: #4a4a4a;
@@ -240,10 +241,12 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 0 15% 10rem 15%;
+  margin: 0 5% 2rem 5%;
 
   @include medium {
     flex-wrap: nowrap;
+    margin: 0 15% 10rem 15%;
+    border: 1px solid red;
   }
 
   h1 {
@@ -331,11 +334,12 @@ body {
   }
   .right-panel-container {
     flex: 0 0 100%;
-    padding: 1rem 0 0 0;
-    margin-top: 3.5rem;
-    padding: 1.5rem 3rem 3rem 3rem;
+    padding: 1.5rem;
     @include medium {
       flex: 0 0 65%;
+      padding: 1rem 0 0 0;
+      margin-top: 3.5rem;
+      padding: 1.5rem 3rem 3rem 3rem;
     }
   }
 }
