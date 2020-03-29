@@ -65,7 +65,7 @@ const ResumeBody = props => {
             <h2 className="education">Education</h2>
           </div>
           <h4 className="full-stack-javascript-developer">
-            Full Stack Javascript Developer
+            Full Stack Developer
           </h4>
           <p>
             <a
