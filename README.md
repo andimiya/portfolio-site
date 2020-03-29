@@ -1,8 +1,8 @@
 Requirements
 
-- Node version 7.9.0
+- Node version 12.13.1
 
 Run project for development:
 
 - `npm install`
-- `npm run dev`
+- `npm run start`
