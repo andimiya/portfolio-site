@@ -1,13 +1,9 @@
-import React from 'react';
-import ResumeBody from '../../components/ResumeBody';
+import React from "react";
+import ResumeBody from "../../components/ResumeBody";
 
 const ResumeContainer = () => {
   return (
-    <div className="about-us-container outer">
-      <div className="header-container-outer">
-        <div className="header-container div-container">
-        </div>
-      </div>
+    <div class="resume-container">
       <ResumeBody />
     </div>
   );
