@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.89d0c64c.chunk.css",
-    "main.js": "/static/js/main.a3ff8011.chunk.js",
-    "main.js.map": "/static/js/main.a3ff8011.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/css/2.dbfe8426.chunk.css": "/static/css/2.dbfe8426.chunk.css",
-    "static/js/2.9b683c32.chunk.js": "/static/js/2.9b683c32.chunk.js",
-    "static/js/2.9b683c32.chunk.js.map": "/static/js/2.9b683c32.chunk.js.map",
+    "main.css": "/static/css/main.5160ab81.chunk.css",
+    "main.js": "/static/js/main.b631c2a7.chunk.js",
+    "main.js.map": "/static/js/main.b631c2a7.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.3350aa7a.js",
+    "runtime-main.js.map": "/static/js/runtime-main.3350aa7a.js.map",
+    "static/css/2.13c50d79.chunk.css": "/static/css/2.13c50d79.chunk.css",
+    "static/js/2.174cc2bc.chunk.js": "/static/js/2.174cc2bc.chunk.js",
+    "static/js/2.174cc2bc.chunk.js.map": "/static/js/2.174cc2bc.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.73a755dff6fbc432fae419a68fa5bfc7.js": "/precache-manifest.73a755dff6fbc432fae419a68fa5bfc7.js",
+    "precache-manifest.266a79e9a00abbb836f367fa5f700aac.js": "/precache-manifest.266a79e9a00abbb836f367fa5f700aac.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/2.dbfe8426.chunk.css.map": "/static/css/2.dbfe8426.chunk.css.map",
-    "static/css/main.89d0c64c.chunk.css.map": "/static/css/main.89d0c64c.chunk.css.map",
+    "static/css/2.13c50d79.chunk.css.map": "/static/css/2.13c50d79.chunk.css.map",
+    "static/css/main.5160ab81.chunk.css.map": "/static/css/main.5160ab81.chunk.css.map",
+    "static/js/2.174cc2bc.chunk.js.LICENSE.txt": "/static/js/2.174cc2bc.chunk.js.LICENSE.txt",
     "static/media/Andrea-Takamiya-Resume.pdf": "/static/media/Andrea-Takamiya-Resume.c13ae529.pdf",
     "static/media/andrea-picture-color.png": "/static/media/andrea-picture-color.d75691f8.png",
     "static/media/certificationsIcon.svg": "/static/media/certificationsIcon.35346a0f.svg",
@@ -23,5 +24,12 @@
     "static/media/instagram.svg": "/static/media/instagram.433c2507.svg",
     "static/media/linkedin.svg": "/static/media/linkedin.9624859d.svg",
     "static/media/techskillsIcon.svg": "/static/media/techskillsIcon.0da737d1.svg"
-  }
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3350aa7a.js",
+    "static/css/2.13c50d79.chunk.css",
+    "static/js/2.174cc2bc.chunk.js",
+    "static/css/main.5160ab81.chunk.css",
+    "static/js/main.b631c2a7.chunk.js"
+  ]
 }
