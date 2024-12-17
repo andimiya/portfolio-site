@@ -6,3 +6,5 @@ Run project for development:
 
 - `npm install`
 - `npm run start`
+
+Test
